@@ -1,0 +1,59 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <Nullable>disable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <OutputType>Library</OutputType>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Entities\**" />
+    <Content Remove="Entities\**" />
+    <EmbeddedResource Remove="Entities\**" />
+    <None Remove="Entities\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Include="Entities\Client.cs" />
+    <Compile Include="Entities\ClientAddresses.cs" />
+    <Compile Include="Entities\ClientContact.cs" />
+    <Compile Include="Entities\ClientEmail.cs" />
+    <Compile Include="Entities\Error_list.cs" />
+    <Compile Include="Entities\LogEntry.cs" />
+    <Compile Include="Entities\Order.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="Properties\launchSettings.json" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="12.0.1" />
+    <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="12.0.1" />
+    <PackageReference Include="FluentValidation " Version="11.6.0" />
+    <PackageReference Include="FluentValidation.AspNetCore" Version="11.3.0" />
+    <PackageReference Include="FluentValidation.DependencyInjectionExtensions" Version="11.7.1" />
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="6.0.20" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="6.0.20" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="7.0.9" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="7.0.9">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="7.0.9" />
+    <PackageReference Include="NLog" Version="5.2.3" />
+    <PackageReference Include="NLog.Database" Version="5.2.3" />
+    <PackageReference Include="NLog.Extensions.Logging" Version="5.3.3" />
+    <PackageReference Include="NLog.Web.AspNetCore" Version="5.3.3" />
+    <PackageReference Include="Serilog" Version="3.0.1" />
+    <PackageReference Include="Serilog.Sinks.MSSqlServer" Version="6.3.0" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.5.0" />
+    <PackageReference Include="System.Data.SqlClient" Version="4.8.5" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Update="FluentValidation" Version="11.7.1" />
+  </ItemGroup>
+
+</Project>
